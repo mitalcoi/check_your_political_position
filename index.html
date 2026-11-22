@@ -44,13 +44,13 @@ a { color: var(--accent); }
 .brand { font: 700 .9rem var(--f-display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 0 1 auto; }
 .progress { min-width: 48px; }
 @media (max-width: 560px) { .top { flex-wrap: wrap; row-gap: 8px; } .brand { flex-basis: 100%; white-space: normal; } }
-.foot { font-size: .85rem; font-style: italic; color: var(--muted); text-align: center; max-width: 36rem; margin: 8px auto 0; line-height: 1.5; }
+.foot { font-size: .85rem; font-style: italic; color: var(--muted); text-align: center; max-width: 36rem; margin: 0 auto 8px; padding-inline: 16px; line-height: 1.5; }
 .peek { width: min(260px, 66vw); margin: 0 auto calc(-1 * (env(safe-area-inset-bottom, 0px) + 48px)); aspect-ratio: 260 / 108; overflow: hidden; }
 .peek svg { width: 100%; height: auto; display: block; animation: peek-up 1.2s ease-out .4s both; }
 @keyframes peek-up { from { transform: translateY(45%); } to { transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .peek svg { animation: none; } }
-html, body { overflow-x: clip; }
-.tonyimg { display: block; width: 100vw; max-width: none; margin-left: calc(50% - 50vw); margin-bottom: calc(-1 * (env(safe-area-inset-bottom, 0px) + 48px)); height: clamp(120px, 13vw, 240px); object-fit: cover; object-position: 44% 35%; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 45%); mask-image: linear-gradient(to bottom, transparent 0, #000 45%); }
+#footer { position: relative; z-index: 1; margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); margin-bottom: calc(-1 * (env(safe-area-inset-bottom, 0px) + 48px)); padding-top: 20px; }
+.tonyimg { display: block; width: 100%; max-width: none; height: clamp(120px, 13vw, 240px); object-fit: cover; object-position: 44% 35%; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 45%); mask-image: linear-gradient(to bottom, transparent 0, #000 45%); }
 .fcs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .fc { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 4px; background: var(--surface); }
 .fc-q { font-size: .92rem; color: var(--muted); font-style: italic; }
@@ -158,7 +158,8 @@ main { position: relative; z-index: 1; }
 <body>
 <div id="deco" aria-hidden="true"></div>
 <main id="app" aria-live="polite"></main>
+<footer id="footer"></footer>
 
-<script src="app.8e906d5bec.js"></script>
+<script src="app.f00a9e0170.js"></script>
 </body>
 </html>
