@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Одно лицо для себя, другое для толпы</title>
+<title>Поясни за позицию</title>
 <meta name="description" content="Опросник, который проясняет позицию: какой принцип на самом деле объясняет твои ответы о войнах и границах.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,6 +53,13 @@ a { color: var(--accent); }
 .progress { min-width: 48px; }
 @media (max-width: 560px) { .top { flex-wrap: wrap; row-gap: 8px; } .brand { flex-basis: 100%; white-space: normal; } }
 .foot { font-size: .8rem; color: var(--muted); text-align: center; max-width: 36rem; margin: 8px auto 0; line-height: 1.5; }
+.peek { width: min(260px, 66vw); margin: 0 auto calc(-1 * (env(safe-area-inset-bottom, 0px) + 48px)); aspect-ratio: 260 / 108; overflow: hidden; }
+.peek svg { width: 100%; height: auto; display: block; animation: peek-up 1.2s ease-out .4s both; }
+@keyframes peek-up { from { transform: translateY(45%); } to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .peek svg { animation: none; } }
+html, body { overflow-x: clip; }
+.tonyimg { display: block; width: 100vw; max-width: none; margin-left: calc(50% - 50vw); margin-bottom: calc(-1 * (env(safe-area-inset-bottom, 0px) + 48px)); height: clamp(120px, 13vw, 240px); object-fit: cover; object-position: 44% 35%; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 45%); mask-image: linear-gradient(to bottom, transparent 0, #000 45%); animation: peek-up 1.2s ease-out .4s both; }
+@media (prefers-reduced-motion: reduce) { .tonyimg { animation: none; } }
 .foot cite { font-style: normal; white-space: nowrap; }
 .progress { flex: 1; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
 .progress > i { display: block; height: 100%; background: var(--accent); transition: width .3s; }
@@ -163,6 +170,6 @@ main { position: relative; z-index: 1; }
 <div id="deco" aria-hidden="true"></div>
 <main id="app" aria-live="polite"></main>
 
-<script src="app.d7d0584b21.js"></script>
+<script src="app.f6198e3fc0.js"></script>
 </body>
 </html>
