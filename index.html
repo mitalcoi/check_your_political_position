@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Что по позиции?</title>
 <meta name="description" content="Опросник, который проясняет позицию: какой принцип на самом деле объясняет твои ответы о войнах и границах.">
@@ -20,15 +21,6 @@
   --f-body: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f131b; --surface: #171d28; --ink: #e6e9f0; --muted: #9aa4b6; --line: #2a3242;
-    --accent: #7d95ff; --accent-ink: #0f131b; --accent-soft: #222c4a;
-    --ok: #5cc48a; --ok-soft: #173326; --bad: #ff7a6e; --bad-soft: #3a1c1a; --na: #6b7486;
-    --s1: #6f98ff; --s2: #ff7d70; --s3: #4fcf9b; --s4: #f0b63c; --s5: #b28cff; --s6: #4fc8de;
-    color-scheme: dark;
-  }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -154,17 +146,12 @@ details ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
 /* background tints per screen and decoration layer */
 body { transition: background-color .4s; }
 .tint-1 { --bg: #e7eef6; } .tint-2 { --bg: #e9f1ec; } .tint-3 { --bg: #f1ecf4; } .tint-4 { --bg: #f4ece9; } .tint-5 { --bg: #eceff1; } .tint-6 { --bg: #f1f1e6; }
-@media (prefers-color-scheme: dark) {
-  .tint-1 { --bg: #0e1520; } .tint-2 { --bg: #0e1712; } .tint-3 { --bg: #15111b; } .tint-4 { --bg: #1a1210; } .tint-5 { --bg: #121417; } .tint-6 { --bg: #16160f; }
-}
 #deco { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .deco-i { position: absolute; opacity: .1; }
 .deco-i svg { width: 100%; height: 100%; display: block; }
-@media (prefers-color-scheme: dark) { .deco-i { opacity: .16; } }
 main { position: relative; z-index: 1; }
 .deco-ref { position: absolute; width: min(38vw, 340px); opacity: .32; }
 .deco-ref svg { width: 100%; height: auto; display: block; }
-@media (prefers-color-scheme: dark) { .deco-ref { opacity: .3; filter: brightness(1.6) saturate(.8); } }
 @media (max-width: 760px) { .deco-ref { opacity: .18; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -173,6 +160,6 @@ main { position: relative; z-index: 1; }
 <div id="deco" aria-hidden="true"></div>
 <main id="app" aria-live="polite"></main>
 
-<script src="app.590d8de0e3.js"></script>
+<script src="app.70daf4b4e2.js"></script>
 </body>
 </html>
