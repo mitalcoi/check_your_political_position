@@ -60,6 +60,9 @@ a { color: var(--accent); }
 html, body { overflow-x: clip; }
 .tonyimg { display: block; width: 100vw; max-width: none; margin-left: calc(50% - 50vw); margin-bottom: calc(-1 * (env(safe-area-inset-bottom, 0px) + 48px)); height: clamp(120px, 13vw, 240px); object-fit: cover; object-position: 44% 35%; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 45%); mask-image: linear-gradient(to bottom, transparent 0, #000 45%); animation: peek-up 1.2s ease-out .4s both; }
 @media (prefers-reduced-motion: reduce) { .tonyimg { animation: none; } }
+.fcs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fc { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 4px; background: var(--surface); }
+.fc-q { font-size: .92rem; color: var(--muted); font-style: italic; }
 .foot cite { font-style: normal; white-space: nowrap; }
 .progress { flex: 1; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
 .progress > i { display: block; height: 100%; background: var(--accent); transition: width .3s; }
@@ -170,6 +173,6 @@ main { position: relative; z-index: 1; }
 <div id="deco" aria-hidden="true"></div>
 <main id="app" aria-live="polite"></main>
 
-<script src="app.f6198e3fc0.js"></script>
+<script src="app.1e6a42a220.js"></script>
 </body>
 </html>
