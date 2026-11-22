@@ -29,7 +29,8 @@ body {
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: calc(env(safe-area-inset-top, 0px) + 20px) calc(env(safe-area-inset-bottom, 0px) + 48px);
 }
-main { max-width: 44rem; margin: 0 auto; display: grid; gap: 20px; }
+body { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+main { max-width: 44rem; width: 100%; margin: 0 auto; display: grid; gap: 20px; }
 h1, h2, h3 { text-wrap: balance; margin: 0; line-height: 1.2; }
 h1 { font: 700 clamp(1.8rem, 6vw, 2.6rem)/1.1 var(--f-display); letter-spacing: -0.01em; }
 h2 { font: 700 1.35rem/1.25 var(--f-display); }
@@ -49,7 +50,7 @@ a { color: var(--accent); }
 .peek svg { width: 100%; height: auto; display: block; animation: peek-up 1.2s ease-out .4s both; }
 @keyframes peek-up { from { transform: translateY(45%); } to { transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .peek svg { animation: none; } }
-#footer { position: relative; z-index: 1; margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); margin-bottom: calc(-1 * (env(safe-area-inset-bottom, 0px) + 48px)); padding-top: 20px; }
+#footer { position: relative; z-index: 1; margin-top: auto; margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); margin-bottom: calc(-1 * (env(safe-area-inset-bottom, 0px) + 48px)); padding-top: 20px; }
 .tonyimg { display: block; width: 100%; max-width: none; height: clamp(120px, 13vw, 240px); object-fit: cover; object-position: 44% 35%; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 45%); mask-image: linear-gradient(to bottom, transparent 0, #000 45%); }
 .fcs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .fc { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 4px; background: var(--surface); }
@@ -160,6 +161,6 @@ main { position: relative; z-index: 1; }
 <main id="app" aria-live="polite"></main>
 <footer id="footer"></footer>
 
-<script src="app.1b9d5e637b.js"></script>
+<script src="app.d9a1c9b038.js"></script>
 </body>
 </html>
