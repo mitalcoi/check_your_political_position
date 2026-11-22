@@ -1,0 +1,9 @@
+name: check-your-political-position
+region: ams
+static_sites:
+  - name: web
+    git:
+      repo_clone_url: https://github.com/mitalcoi/check_your_political_position.git
+      branch: main
+    output_dir: /
+    index_document: index.html
